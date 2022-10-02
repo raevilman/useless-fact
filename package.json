@@ -1,0 +1,25 @@
+{
+  "name": "vlog-create-homebrew-formula",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js -o build",
+    "package": "pkg . -t linux --output dist/useless-fact"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/ncc": "^0.34.0",
+    "node-fetch": "^2.6.7",
+    "pkg": "^5.8.0"
+  },
+  "bin": {
+    "useless-fact": "./build/index.js"
+  },
+  "pkg": {
+    "scripts": "build/**/*.js"
+  }
+}
